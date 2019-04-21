@@ -1,0 +1,152 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.box3, .box1 {
+  border: 5px dotted yellow;
+  padding: 5px;
+  font-size: 3em;
+}
+
+.box1 {
+  height: 200px;
+  width: 200px;
+  margin: 200px;
+  background-color: red;
+}
+
+.box2 {
+  height: 100px;
+  width: 100px;
+  margin: 100px;
+  background-color: blue;
+}
+
+.box3 {
+  height: 150px;
+  width: 150px;
+  margin: 150px;
+  background-color: green;
+}
+
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+  margin: 0;
+  background: #159f9b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+html body h1 {
+  font-weight: 400;
+  font-size: 3em;
+  padding-bottom: 30px;
+  color: darkgray;
+}
+html body input {
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  width: 100px;
+  transition: 0.6s;
+  color: gray;
+  background: rgba(255, 255, 255, 0.6);
+}
+html body input:focus {
+  width: 180px;
+  background: white;
+}
+html body input:focus::placeholder {
+  color: gray;
+}
+html body div.stats,
+html body div.humidity,
+html body div.pressure {
+  margin-top: 20px;
+  font-size: 24px;
+  color: gray;
+}
+html body div.stats div.spinner,
+html body div.humidity div.spinner,
+html body div.pressure div.spinner {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  border: none;
+  border-top: 5px solid lightblue;
+  border-radius: 50%;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+html body div.humidity,
+html body div.pressure,
+html body div.stats span.hidden,
+html body div.stats div.spinner {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

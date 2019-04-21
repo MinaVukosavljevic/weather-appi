@@ -1,0 +1,76 @@
+@import 'reset';
+@import 'test';
+
+html {
+    height: 100%;
+    body {
+        height: 100%;
+        margin: 0;
+        background: rgb(21, 159, 155);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        
+        h1 {
+            font-weight: 400;
+            font-size: 3em;
+            padding-bottom:30px;
+            color: darkgray;
+        }
+        
+        input {
+            padding: 15px;
+            border-radius: 25px;
+            border: none;
+            width: 100px;
+            transition: .6s;
+            color: gray;
+            background: rgba(255, 255, 255, .6) ;
+        }
+        
+        input:focus {
+            width: 180px;
+            background: rgba(255, 255, 255, 1);
+        
+        }
+        
+        input:focus::placeholder {
+            color: gray;
+        }
+        
+        div.stats,
+        div.humidity,
+        div.pressure {
+            margin-top: 20px;
+            font-size: 24px;
+            color: gray;
+            
+            div.spinner {
+                display: inline-block;
+                height: 32px;
+                width: 32px;
+                border: none;
+                border-top: 5px solid lightblue;
+                border-radius: 50%;
+                // animation: spin 1s infinite;
+                -webkit-animation:spin 4s linear infinite;
+                -moz-animation:spin 4s linear infinite;
+                animation:spin 4s linear infinite;
+            }
+
+            @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+            @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+            @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+        }
+
+        div.humidity,
+        div.pressure,
+        div.stats span.hidden,
+        div.stats div.spinner {
+            display:none;
+        }
+    }
+}

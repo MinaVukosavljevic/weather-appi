@@ -1,0 +1,28 @@
+%border {
+    border: 5px dotted yellow;
+    padding: 5px;
+    font-size: 3em;
+}
+
+@mixin wh($value) {
+    height: $value;
+    width: $value;
+    margin: $value;
+}
+
+.box1 {
+    @include wh(200px);
+    background-color: red;
+    @extend %border;
+}
+
+.box2 {
+    @include wh(100px);
+    background-color: blue;
+}
+
+.box3 {
+    @include wh(150px);
+    background-color: green;
+    @extend %border;
+}
